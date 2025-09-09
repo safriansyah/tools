@@ -1,0 +1,69 @@
+- Information Disclosure
+site:*.example.com (ext:doc OR ext:docx OR ext:odt OR ext:pdf OR ext:rtf OR ext:ppt OR ext:pptx OR ext:csv OR ext:xls OR ext:xlsx OR ext:txt OR ext:xml OR ext:json OR ext:zip OR ext:rar OR ext:md OR ext:log OR ext:bak OR ext:conf OR ext:sql)
+site:drive.google.com "example.com"
+site:example.com intext:uploadimage OR intext:"Upload File"
+site:example.com ext:php intitle:phpinfo published
+site:example.com ext:xml OR ext:conf OR ext:cnf OR ext:reg OR ext:inf OR ext:rdp OR ext:cfg OR ext:txt OR ext:ora OR ext:ini
+
+- Subdomain finding:
+https://crt.sh/?q=%25.example.com
+https://securitytrails.com/domain/example.com/dns
+https://searchdns.netcraft.com/?restriction=site+ends+with&host=example.com
+subfinder -d example.com -all -recursive -o example.com_subdomains.txt
+
+- Reconnaissance
+Port Scanning: nmap -sV -p- --min-rate 1000 example.com -oN example.com_nmap.txt
+Port scanning: https://viewdns.info/portscan/?host=example.com, https://web-check.xyz/result/example.com, https://dnschecker.org/port-scanner.php?query=example.com
+Directory Enumeration: ffuf -u https://example.com/FUZZ -w /path/to/wordlist.txt -mc 200,301,302 -o example.com_directories.json
+
+- Url Collection
+Pasive Url Colection: katana -u example.com_alive.txt -d 5 -ps -pss waybackarchive,commoncrawl,alienvault -kf -jc -fx -ef woff,css,png,svg,jpg,woff2,jpeg,gif,svg -o allurls.txt
+https://web.archive.org/web/*/example.com/*
+https://urlscan.io/search/#domain:example.com
+
+- Technology detector
+builtwith.com
+wappalyzer
+whatcms
+w3techs
+
+- Origin IP finding
+https://viewdns.info/iphistory/?domain=example.com
+dnsdumpster
+https://securitytrails.com/list/apex_domain/example.com
+
+- DNS
+https://toolbox.googleapps.com/apps/dig/#NS/example.com
+https://mxtoolbox.com/SuperTool.aspx?action=txt%3aexample.com
+https://dnschecker.org/ns-lookup.php?query=example.com
+https://www.robtex.com/dns-lookup/example.com
+
+- Organization OSINT
+https://www.google.com/search?q=site%3Acrunchbase.com+example.com
+https://github.com/search?q=%22example.com%22&type=code
+https://stackoverflow.com/search?q=%22example.com%22
+https://www.threatcrowd.org/domain.php?domain=example.com
+DAN TOOLS OVERPOWER PRIVATE GW
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
